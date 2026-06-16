@@ -2,25 +2,32 @@ name: Build and Deploy Jekyll
 
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]  
 
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
-    - uses: actions/checkout@v3
-    
-    - name: Set up Ruby
-      uses: ruby/setup-ruby@v1
-      with:
-        ruby-version: 2.7
-        bundler-cache: true
-    
-    - name: Build Jekyll site
-      run: bundle exec jekyll build
-    
-    - name: Deploy to GitHub Pages
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./_site
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 3.1  
+          bundler-cache: true
+
+      - name: Install dependencies
+        run: bundle install 
+      - name: Build Jekyll site
+        run: bundle exec jekyll build --trace  
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./_site
+          keep_files: false  
+          user_name: Imanmh369  
+          user_email: your-email@example.com  
