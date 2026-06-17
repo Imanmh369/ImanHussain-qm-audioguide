@@ -171,24 +171,31 @@ $("#jquery_jplayer_1").jPlayer({
 
 // Language toggle buttons
 $("#lang-en").on("click", function() {
- $("#jquery_jplayer_1").jPlayer("setMedia", {
-   mp3: "{{ site.baseurl }}{{ site.audio_path }}{{ page.audio_file_en }}"
- }).jPlayer("play");
+  $("#jquery_jplayer_1").jPlayer("setMedia", {
+    mp3: "{{ site.baseurl }}{{ site.audio_path }}{{ page.audio_file_en }}"
+  }).jPlayer("play");
 
- // Show English transcript, hide Arabic
- $("#transcript-en").show();
- $("#transcript-ar").hide();
+  // Update title text
+  $(".jp-title").text("Welcome to the first stop in the tour");
+
+  // Show English transcript, hide Arabic
+  $("#transcript-en").show();
+  $("#transcript-ar").hide();
 });
 
 $("#lang-ar").on("click", function() {
- $("#jquery_jplayer_1").jPlayer("setMedia", {
-   mp3: "{{ site.baseurl }}{{ site.audio_path }}{{ page.audio_file_ar }}"
- }).jPlayer("play");
+  $("#jquery_jplayer_1").jPlayer("setMedia", {
+    mp3: "{{ site.baseurl }}{{ site.audio_path }}{{ page.audio_file_ar }}"
+  }).jPlayer("play");
 
- // Show Arabic transcript, hide English
- $("#transcript-ar").show();
- $("#transcript-en").hide();
+  // Update title text
+  $(".jp-title").text("مرحبًا بكم في المحطة الأولى من الجولة");
+
+  // Show Arabic transcript, hide English
+  $("#transcript-ar").show();
+  $("#transcript-en").hide();
 });
+
 
 });
 </script>
