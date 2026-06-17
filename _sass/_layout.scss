@@ -330,6 +330,9 @@
             border-radius: $tile-border-radius;
             position: relative;
             padding: 0;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
             &:hover, &:active, &:focus {
                 background-color: lighten($tile-bgcolor, 10%);
             }
