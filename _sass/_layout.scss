@@ -495,9 +495,12 @@ Hero images on audio guide stop pages
 
     img {
         width: 100%;
-        max-width: 512px;
+        max-width: none;
         height: auto;
-        display: inline-block;
+        display: block;
+        margin: 0 auto;
+        border-radius: 6px;
+        box-shadow: 0 0 12px rgba(0,0,0,0.2)
     }
 }
 
