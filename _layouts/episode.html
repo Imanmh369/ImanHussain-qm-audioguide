@@ -27,7 +27,8 @@ layout: master_episode
     </div>
   {% endif %}
   <div class="post-content">
-    {{ content }}
+   <p class="audio-title">🎧 {{ page.title }}</p>
+  <audio controls src="{{ page.audio }}"></audio>
   </div>
 
 </article>
