@@ -159,8 +159,20 @@ $(document).ready(function(){
     remainingDuration: true,
     toggleDuration: true
   });
-});
 
+  // Language toggle buttons
+  $("#lang-en").on("click", function() {
+    $("#jquery_jplayer_1").jPlayer("setMedia", {
+      mp3: "{{ site.baseurl }}{{ site.audio_path }}{{ page.audio_file_en }}"
+    }).jPlayer("play");
+  });
+
+  $("#lang-ar").on("click", function() {
+    $("#jquery_jplayer_1").jPlayer("setMedia", {
+      mp3: "{{ site.baseurl }}{{ site.audio_path }}{{ page.audio_file_ar }}"
+    }).jPlayer("play");
+  });
+});
   </script>
     <!-- JS for this web app -->
   <script src="{{ site.baseurl }}/assets/js/main.js?v={{ site.version_number }}"></script>
