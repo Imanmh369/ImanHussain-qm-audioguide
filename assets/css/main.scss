@@ -26,12 +26,12 @@ $grey-color: $brand-color;
 
 $player-now-playing-size:   13px;
 $player-height:		90px;
-$player-button-size:	60px;
-$player-bgcolor:	$brand-color;
-$player-scrubber-color:	darken($brand-color, 1%);
-$player-loaded-color:	darken($brand-color, 5%);
-$player-progress-color:		lighten($brand-color, 10%);
-$player-play-color:		lighten($brand-color, 5%);
+$player-button-size:	48px;
+$player-bgcolor:	#F5EFE7;
+$player-scrubber-color:	#CBBBA0;
+$player-loaded-color:	#E0D6CC;
+$player-progress-color:		#4A3F35;
+$player-play-color:		#4A3F35;
 $player-progress-height: 14px;
 
 $tile-bgcolor:	   $brand-color;
@@ -61,12 +61,6 @@ $height-600:       600px;
 //     }
 // }
 
-// Audio player color overrides
-$player-bgcolor: #F5EFE7;        // beige background
-$player-scrubber-color: #CBBBA0; // muted beige inactive bar
-$player-loaded-color: #E0D6CC;   // lighter beige track
-$player-progress-color: #4A3F35; // rich brown accent
-$player-play-color: #4A3F35;     // brown play button
 
 
 // Audio player styling
