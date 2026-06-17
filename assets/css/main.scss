@@ -121,6 +121,20 @@ $height-600:       600px;
   box-shadow: 0 0 10px rgba(0,0,0,0.3);
 }
 
+.language-toggle button {
+  background-color: #4A3F35;
+  color: #fff;
+  border-radius: 6px;
+  padding: 0.5em 1em;
+  margin: 0 0.5em;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+.language-toggle button:hover {
+  background-color: #5A4A3F;
+}
+
+
 
 @mixin media-query($device) {
     @media screen and (max-width: $device) {
