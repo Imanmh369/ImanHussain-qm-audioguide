@@ -60,6 +60,60 @@ $height-600:       600px;
 //         padding-left: $spacing-unit / 2;
 //     }
 // }
+
+// Audio player styling
+.jp-audio {
+  background-color: #D6CCC3;   // beige background
+  border-radius: 12px;
+  padding: 1.5em;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  max-width: 600px;
+  margin: 2em auto;
+}
+
+.player-now-playing p {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 1em;
+  color: #333;
+  text-align: center;
+}
+
+.jp-progress {
+  background-color: #eee;
+  border-radius: 6px;
+  height: 8px;
+  margin: 1em 0;
+}
+
+.jp-seek-bar {
+  background-color: #ccc;
+  border-radius: 6px;
+  height: 100%;
+}
+
+.jp-play-bar {
+  background-color: #74A8FF;   // accent color
+  border-radius: 6px;
+  height: 100%;
+}
+
+.jp-controls .jp-play {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.jp-controls .jp-play:hover {
+  transform: scale(1.1);
+  background-color: #000;
+}
+
 @mixin media-query($device) {
     @media screen and (max-width: $device) {
         @content;
