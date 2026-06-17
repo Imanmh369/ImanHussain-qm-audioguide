@@ -137,43 +137,62 @@ if ($.support.fixedPosition) {
     }
   })(document,window.navigator,'standalone');
 
-// Initialise jPlayer, grabbed the MP3 source file from the audio element on the page.
+That’s one `});` too many. You only need to close the `$(document).ready(function(){ ... });` once.
+
+2. **Script tag placement**  
+Make sure the `</script>` tag closes *after* your `$(document).ready()` block, not after an extra brace.
+
+---
+
+
+
+```html
+<script type="text/javascript">
 $(document).ready(function(){
 
-  $("#jquery_jplayer_1").jPlayer({
-    ready: function () {
-      $("#episode-element").hide();
-      $(this).jPlayer("setMedia", {
-        title: "",
-        mp3: $("#episode-source").attr("src")
-      });
-
-    },
-    swfPath: "{{ site.baseurl }}/assets/js/jplayer",
-    supplied: "mp3",
-    wmode: "window",
-    useStateClassSkin: true,
-    autoBlur: false,
-    smoothPlayBar: true,
-    keyEnabled: true,
-    remainingDuration: true,
-    toggleDuration: true
-  });
-
-  // Language toggle buttons
-  $("#lang-en").on("click", function() {
-    $("#jquery_jplayer_1").jPlayer("setMedia", {
-      mp3: "{{ site.baseurl }}{{ site.audio_path }}{{ page.audio_file_en }}"
-    }).jPlayer("play");
-  });
-
-  $("#lang-ar").on("click", function() {
-    $("#jquery_jplayer_1").jPlayer("setMedia", {
-      mp3: "{{ site.baseurl }}{{ site.audio_path }}{{ page.audio_file_ar }}"
-    }).jPlayer("play");
-  });
+$("#jquery_jplayer_1").jPlayer({
+ ready: function () {
+   $("#episode-element").hide();
+   $(this).jPlayer("setMedia", {
+     title: "",
+     mp3: $("#episode-source").attr("src")
+   });
+ },
+ swfPath: "{{ site.baseurl }}/assets/js/jplayer",
+ supplied: "mp3",
+ wmode: "window",
+ useStateClassSkin: true,
+ autoBlur: false,
+ smoothPlayBar: true,
+ keyEnabled: true,
+ remainingDuration: true,
+ toggleDuration: true
 });
-  </script>
+
+// Language toggle buttons
+$("#lang-en").on("click", function() {
+ $("#jquery_jplayer_1").jPlayer("setMedia", {
+   mp3: "{{ site.baseurl }}{{ site.audio_path }}{{ page.audio_file_en }}"
+ }).jPlayer("play");
+
+ // Show English transcript, hide Arabic
+ $("#transcript-en").show();
+ $("#transcript-ar").hide();
+});
+
+$("#lang-ar").on("click", function() {
+ $("#jquery_jplayer_1").jPlayer("setMedia", {
+   mp3: "{{ site.baseurl }}{{ site.audio_path }}{{ page.audio_file_ar }}"
+ }).jPlayer("play");
+
+ // Show Arabic transcript, hide English
+ $("#transcript-ar").show();
+ $("#transcript-en").hide();
+});
+
+});
+</script>
+
     <!-- JS for this web app -->
   <script src="{{ site.baseurl }}/assets/js/main.js?v={{ site.version_number }}"></script>
 </head>
