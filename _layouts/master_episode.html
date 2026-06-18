@@ -80,12 +80,6 @@
           {% endfor %}
         </div>
 
-        {% if page.audio_file != null %}
-        <div class="jp-controls" style="display: inline-block; text-align: center;">
-          <button class="jp-play" role="button" tabindex="0" style="display: inline-block;"></button>
-        </div>
-        {% endif %}
-
         <div class="player-buttons-next">
           {% for my_page in site.pages %}
             {% capture page_rank_higher %}{{my_page.page_rank | minus: 1}}{% endcapture %}
