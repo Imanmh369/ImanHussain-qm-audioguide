@@ -137,50 +137,73 @@ if ($.support.fixedPosition) {
     }
   })(document,window.navigator,'standalone');
 
+    {% comment %}
 That’s one `});` too many. You only need to close the `$(document).ready(function(){ ... });` once.
 
 2. **Script tag placement**  
 Make sure the `</script>` tag closes *after* your `$(document).ready()` block, not after an extra brace.
 
 ---
+  {% endcomment %}
+
 
 
 
 <script type="text/javascript">
 $(document).ready(function(){
 
-  $("#jquery_jplayer_1").jPlayer({
-    ready: function () {
-      $("#episode-element").hide();
-      $(this).jPlayer("setMedia", {
-        mp3: $("#episode-source").attr("src")
-      });
-    },
-    swfPath: "{{ site.baseurl }}/assets/js/jplayer",
-    supplied: "mp3",
-    wmode: "window",
-    useStateClassSkin: true,
-    autoBlur: false,
-    smoothPlayBar: true,
-    keyEnabled: true,
-    remainingDuration: true,
-    toggleDuration: true
-  });
+$("#jquery_jplayer_1").jPlayer({
+ ready: function () {
+   $("#episode-element").hide();
+   $(this).jPlayer("setMedia", {
+     title: "",
+     mp3: $("#episode-source").attr("src")
+   });
+ },
+ swfPath: "{{ site.baseurl }}/assets/js/jplayer",
+ supplied: "mp3",
+ wmode: "window",
+ useStateClassSkin: true,
+ autoBlur: false,
+ smoothPlayBar: true,
+ keyEnabled: true,
+ remainingDuration: true,
+ toggleDuration: true
+});
 
-  // Language toggle buttons
-  $("#lang-en").on("click", function() {
-    $("#jquery_jplayer_1").jPlayer("setMedia", {
-      mp3: "{{ site.baseurl }}{{ site.audio_path }}{{ page.audio_file_en }}"
-    }).jPlayer("play");
-  });
+// Language toggle buttons
+$("#lang-en").on("click", function() {
+  $("#jquery_jplayer_1").jPlayer("setMedia", {
+    mp3: "{{ site.baseurl }}{{ site.audio_path }}{{ page.audio_file_en }}"
+  }).jPlayer("play");
 
-  $("#lang-ar").on("click", function() {
-    $("#jquery_jplayer_1").jPlayer("setMedia", {
-      mp3: "{{ site.baseurl }}{{ site.audio_path }}{{ page.audio_file_ar }}"
-    }).jPlayer("play");
-  });
+  // Update title text
+  $(".jp-title").text("Welcome to the first stop in the tour")
+                .attr("lang","en")
+                .css({"direction":"ltr","text-align":"left"});
 
-}); // <-- only one closing brace here
+  // Show English transcript, hide Arabic
+  $("#transcript-en").show();
+  $("#transcript-ar").hide();
+});
+
+$("#lang-ar").on("click", function() {
+  $("#jquery_jplayer_1").jPlayer("setMedia", {
+    mp3: "{{ site.baseurl }}{{ site.audio_path }}{{ page.audio_file_ar }}"
+  }).jPlayer("play");
+
+  // Update title text
+  $(".jp-title").text("مرحبًا بكم في المحطة الأولى من الجولة")
+                .attr("lang","ar")
+                .css({"direction":"rtl","text-align":"right"});
+
+  // Show Arabic transcript, hide English
+  $("#transcript-ar").show();
+  $("#transcript-en").hide();
+});
+
+
+});
 </script>
 
 
