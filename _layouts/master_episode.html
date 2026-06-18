@@ -38,11 +38,11 @@
         </p>
       </div>
 
-      {% if page.audio_file != null %}
+      {% if page.audio_file_en or page.audio_file_ar %}
       <div id="jquery_jplayer_1" class="jp-jplayer"></div>
       <div id="episode-element" style="display:none;">
   <audio>
-    <source id="episode-source" src="{{ site.baseurl }}{{ site.audio_path }}{{ page.audio_file }}" type="audio/mpeg">
+    <source id="episode-source" src="{{ site.baseurl }}{{ site.audio_path }}{{ page.audio_file_en }}" type="audio/mpeg">
   </audio>
 </div>
 
