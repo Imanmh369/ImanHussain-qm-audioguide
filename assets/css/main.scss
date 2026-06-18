@@ -101,6 +101,17 @@ $height-600:       600px;
   border-radius: 6px;
   height: 100%;
   transition: width 0.3s ease-in-out;
+  width: 100%; 
+}
+
+.jp-progress,
+.jp-seek-bar {
+  overflow: hidden;            // prevents clipping
+}
+
+.jp-play-bar.jp-state-playing,
+.jp-play-bar.jp-state-ended {
+  width: 100% !important;      // force full fill when audio ends
 }
 
 /* Play button */
