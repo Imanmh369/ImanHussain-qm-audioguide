@@ -180,7 +180,8 @@ $height-600:       600px;
   display: flex;
   flex-direction: column;   // stack children vertically
   align-items: center;      // center them horizontally
-}.jp-progress {
+}
+.jp-progress {
   order: 1;
   width: 80%;
   margin-bottom: 0.5em;
@@ -191,6 +192,29 @@ $height-600:       600px;
   display: flex;
   justify-content: center;
   margin-top: 0.5em;
+}
+
+
+/* Prev/Next navigation buttons */
+.player-buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin-top: 1em;
+}
+
+.player-buttons-prev,
+.player-buttons-next {
+  font-weight: bold;
+  color: #4A3F35;   // dark brown for contrast
+}
+
+.player-buttons-prev-number,
+.player-buttons-next-number {
+  font-size: 16px;
+  background-color: #CBBBA0;  // light beige badge
+  padding: 0.3em 0.6em;
+  border-radius: 4px;
 }
 
 
