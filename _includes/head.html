@@ -136,20 +136,10 @@ if ($.support.fixedPosition) {
       },false);
     }
   })(document,window.navigator,'standalone');
-
-    {% comment %}
-That’s one `});` too many. You only need to close the `$(document).ready(function(){ ... });` once.
-   {% endcomment %}
-
-2. **Script tag placement**  
-Make sure the `</script>` tag closes *after* your `$(document).ready()` block, not after an extra brace.
-
----
- 
+  </script>
 
 
-
-
+<!-- jPlayer language toggle --> 
 <script type="text/javascript">
 $(document).ready(function(){
 
