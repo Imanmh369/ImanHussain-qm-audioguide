@@ -61,7 +61,11 @@ $height-600:       600px;
 //     }
 // }
 
-
+.audio-player {
+  display: flex;
+  flex-direction: column;   // stack children vertically
+  align-items: center;      // center them horizontally
+}
 
 // Audio player styling
 .jp-audio {
@@ -132,6 +136,32 @@ $height-600:       600px;
   box-shadow: 0 0 10px rgba(0,0,0,0.3);
 }
 
+/* Stop button */
+.jp-controls .jp-stop {
+  background-color: #4A3F35;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  margin-left: 1em;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.jp-controls .jp-stop:hover {
+  background-color: #5A4A3F;
+}
+
+/* Language toggle */
+.language-toggle {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  margin: 1em 0;
+}
+
 .language-toggle button {
   background-color: #4A3F35;
   color: #fff;
@@ -143,6 +173,24 @@ $height-600:       600px;
 }
 .language-toggle button:hover {
   background-color: #5A4A3F;
+}
+
+/* Audio player wrapper for alignment */
+.audio-player {
+  display: flex;
+  flex-direction: column;   // stack children vertically
+  align-items: center;      // center them horizontally
+}.jp-progress {
+  order: 1;
+  width: 80%;
+  margin-bottom: 0.5em;
+}
+
+.jp-controls {
+  order: 2;
+  display: flex;
+  justify-content: center;
+  margin-top: 0.5em;
 }
 
 
