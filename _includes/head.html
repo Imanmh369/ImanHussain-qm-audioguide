@@ -40,7 +40,8 @@
   <script src="{{ site.baseurl }}/assets/js/jplayer/jquery.jplayer.min.js"></script>
 
   <!-- CSS for this web app -->
-  <link rel='stylesheet' href='{{ "/assets/css/main.css" | prepend: site.baseurl }}?v={{ site.version_number }}'>
+ <link rel="stylesheet" href="{{ '/assets/css/main.css?v=' | append: site.time | relative_url }}">
+
 
   <script type="text/javascript">
 
