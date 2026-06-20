@@ -353,17 +353,18 @@ $height-600:       600px;
   padding: 0.6em 0;
 }
 
-.site-header-wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 90%;
+.site-title-text {
+  font-size: 28px;
+  font-weight: 600;
+  color: #ffffff;
+  letter-spacing: 1px;
 }
 
 .site-title {
   display: flex;
   align-items: center;
-  gap: 0.6em;                    // space between logos
+  justify-content: center;
+  gap: 0.6em;   // space between logos and text
 }
 
 .site-logo {
