@@ -233,7 +233,7 @@ $height-600:       600px;
 .player-buttons-next {
   display: flex;
   align-items: center;
-  gap: 0.3em;
+  gap: 0.4em;
 }
 
 .player-buttons-prev-number,
@@ -246,6 +246,7 @@ $height-600:       600px;
   box-shadow: 0 0 6px rgba(0,0,0,0.4);
   text-decoration: none;   // remove underline
   display: inline-block;
+  line-height: 1; 
 }
 
 /* Prev/Next buttons on sides */
@@ -254,6 +255,10 @@ $height-600:       600px;
   justify-content: space-between;
   align-items: center;
   width: 100%;   
+  padding: 0 2em;
+  margin-top: 0.5em;
+  position: relative;
+  z-index: 10;
   box-sizing: border-box;
 }
 
