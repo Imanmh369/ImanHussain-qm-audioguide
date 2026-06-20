@@ -234,25 +234,26 @@ $height-600:       600px;
 ;
 
 .audio-footer-container {
+  position: relative;
   background-color: $player-bgcolor !important;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
   width: 100%;          // full width across the page
-  height: auto; 
   min-height: 140px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center; // centers inner elements vertically
-  padding:  0.8em 0;
+  padding:  0.6em 0;
 }
 
 .jp-audio {
-  height: 100%;         // fills the container height
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  align-items: center;
+  gap: 0.6em;  // consistent spacing between elements
 }
+
 
 /* Prev/Next buttons */
 .player-buttons-prev,
