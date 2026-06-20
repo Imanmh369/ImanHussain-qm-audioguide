@@ -237,8 +237,8 @@ $height-600:       600px;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  padding: 0.4em 0;
-  margin-top: 5em;   
+  padding: 0.4em 2em;
+  margin-top: 6em;   
 }
 
 
@@ -260,11 +260,9 @@ $height-600:       600px;
 /* Prev/Next buttons */
 .player-buttons-prev,
 .player-buttons-next {
-  font-weight: bold;
-  color: #000000;   // pure black text
   display: flex;
   align-items: center;
-  gap: 0.4em; 
+  gap: 0.3em;
 }
 
 .player-buttons-prev-number,
@@ -281,21 +279,9 @@ $height-600:       600px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 90%;
-  margin-top: 0.4em;
-}
-
-/* Optional: make arrows larger and closer */
-.player-buttons-prev::before {
-  content: "◀";             // left arrow
-  color: #ffffff;
-  font-size: 18px;
-}
-
-.player-buttons-next::after {
-  content: "▶";             // right arrow
-  color: #ffffff;
-  font-size: 18px;
+  width: 100%;
+  padding: 0 1.5em;     
+  box-sizing: border-box;
 }
 
 /* Center play button */
