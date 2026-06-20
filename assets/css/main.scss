@@ -243,14 +243,16 @@ $height-600:       600px;
   background-color: $player-bgcolor !important;
   border-radius: 0;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
-  width: 100%;          // full width across the page
+  width: 100%;
   height: 200px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly; // centers inner elements vertically
-  padding:  0.4em 0;
+  justify-content: space-evenly;
+  padding: 0.4em 0;
+  margin-top: 2em;   
 }
+
 
 .jp-audio {
   display: flex;
