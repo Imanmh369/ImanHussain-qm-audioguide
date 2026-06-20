@@ -236,23 +236,22 @@ $height-600:       600px;
 .audio-footer-container {
   position: relative;
   background-color: $player-bgcolor !important;
-  border-radius: 12px;
+  border-radius: 0;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
   width: 100%;          // full width across the page
-  min-height: 120px;
-  height: auto;
+  height: 200px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center; // centers inner elements vertically
-  padding:  0.6em 0;
+  justify-content: space-evenly; // centers inner elements vertically
+  padding:  0.4em 0;
 }
 
 .jp-audio {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.6em;  // consistent spacing between elements
+  gap: 0.4em;  // consistent spacing between elements
 }
 
 .jp-interface,
@@ -281,11 +280,9 @@ $height-600:       600px;
 /* Prev/Next buttons on sides */
 .player-buttons {
   display: flex;
-  justify-content: space-between;  // pushes them to edges
-  align-items: center;
-  width: 100%;
-  padding: 0 1.5em;
-  margin-top: 1em;
+  justify-content: space-between;
+  width: 90%;
+  margin-top: 0.4em;
 }
 
 
@@ -335,9 +332,9 @@ $height-600:       600px;
 }
 
 .jp-progress {
-  width: 90%;           // full width inside container
-  margin: 0.8em auto;
-  height: 12px;
+  width: 90%;                    // stretch progress bar across the box
+  height: 8px;
+  margin: 0.4em 0;
   background-color: #E0D6CC;
   border-radius: 6px;
   overflow: hidden;
