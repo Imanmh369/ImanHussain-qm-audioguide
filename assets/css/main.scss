@@ -239,7 +239,8 @@ $height-600:       600px;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
   width: 100%;          // full width across the page
-  min-height: 140px;
+  min-height: 120px;
+  height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -252,6 +253,13 @@ $height-600:       600px;
   flex-direction: column;
   align-items: center;
   gap: 0.6em;  // consistent spacing between elements
+}
+
+.jp-interface,
+.audio-footer-container {
+  position: relative !important;   // force it to scroll with page
+  bottom: auto !important;         // remove fixed bottom placement
+  top: auto !important;
 }
 
 
