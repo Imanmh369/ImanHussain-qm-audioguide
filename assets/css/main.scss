@@ -198,7 +198,7 @@ $height-600:       600px;
 ;
 
 .audio-footer-container {
-  position: relative;
+  position: fixed;
   background-color: $player-bgcolor !important;
   border-radius: 0;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
