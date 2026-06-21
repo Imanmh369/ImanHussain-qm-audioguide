@@ -198,7 +198,7 @@ $height-600:       600px;
 ;
 
 .audio-footer-container {
-  position: fixed;
+  position: fixed !important;
   background-color: $player-bgcolor !important;
   border-radius: 0;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
@@ -220,12 +220,7 @@ $height-600:       600px;
   gap: 0.4em;  // consistent spacing between elements
 }
 
-.jp-interface,
-.audio-footer-container {
-  position: relative !important;   // force it to scroll with page
-  bottom: auto !important;         // remove fixed bottom placement
-  top: auto !important;
-}
+
 
 
 /* Prev/Next buttons */
