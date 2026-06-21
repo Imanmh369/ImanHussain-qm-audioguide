@@ -234,7 +234,6 @@ $height-600:       600px;
   display: flex;
   align-items: center;
   gap: 0.4em;
-  padding: 0 0 0.2em 0;
 }
 
 .player-buttons-prev-number,
@@ -245,6 +244,7 @@ $height-600:       600px;
   border-radius: 4px;
   font-size: 16px;
   display: inline-block;
+  align-items: center; 
   line-height: 1; 
 }
 
