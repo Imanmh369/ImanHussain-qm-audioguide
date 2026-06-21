@@ -372,8 +372,11 @@ $height-600:       600px;
   display: block;
 }
 
+
 .home {
-  background: linear-gradient(135deg, #000000, #f5f0e6);
+  background-color: #f5f0e6;   // soft beige
+  min-height: 100vh;           // ensures full viewport coverage
+  padding: 2em;                // optional spacing
 }
 
 
