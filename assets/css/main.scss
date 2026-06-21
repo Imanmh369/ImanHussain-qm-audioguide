@@ -374,9 +374,12 @@ $height-600:       600px;
 
 
 .home {
-  background-color: #f5f0e6;   // soft beige
+  background-color: #D0C5BE;   // soft beige
   min-height: 100vh;           // ensures full viewport coverage
   padding: 2em;                // optional spacing
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box; 
 }
 
 
